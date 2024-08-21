@@ -1,5 +1,6 @@
 :root {
   --color-black: #151a27;
+  --color-black2: #0e1d42;
   --color-darkPurple: #5a72a0;
   --color-lightPurple: #83b4ff;
   --color-white: #fff;
@@ -219,6 +220,13 @@ section.landing .profile-area .outter-circle {
   position: relative;
   animation: move 30s linear infinite;
 }
+
+@keyframes move {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 section.landing .profile-area .outter-circle i {
   display: block;
   height: 4rem;
@@ -231,12 +239,6 @@ section.landing .profile-area .outter-circle i {
   justify-content: center;
   align-items: center;
   border: 1px solid var(--color-blue);
-}
-
-@keyframes move {
-  to {
-    transform: rotate(360deg);
-  }
 }
 
 section.landing .profile-area .outter-circle i:nth-child(1) {
@@ -257,5 +259,79 @@ section.landing .profile-area .outter-circle i:nth-child(4) {
 }
 
 section.landing .profile-area .inner-circle {
+  position: absolute;
+  height: 18rem;
+  width: 18rem;
+  border-radius: 50%;
+  overflow: hidden;
+}
+section.skill-section {
+  background-color: var(--color-black2);
+  border-top: solid 1px var(--color-light);
+}
+/*=================================== About section===============================*/
+section.about .container {
+  display: grid;
+  grid-template-columns: 26rem auto;
+  gap: 5rem;
+}
+section.about p {
+  margin-bottom: 1rem;
+}
+
+section.about .read-more-content {
   display: none;
+}
+
+section.about .read-more-link {
+  display: block;
+  margin: 1rem 0 2rem;
+  color: red;
+  cursor: pointer;
+  transition: var(--transitions);
+}
+section.about .read-more-link:hover {
+  text-decoration: underline;
+}
+section.about .image img {
+  border: solid 3px var(--color-blue);
+  border-radius: 5rem 0;
+}
+
+section.skill-section .container {
+  width: 50%;
+}
+
+section.skill-section .skill {
+  margin-bottom: 1rem;
+}
+
+section.skill-section .skill .head {
+  background-color: var(--color-blue);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #f4f4f4;
+  padding: 1.6rem;
+  cursor: pointer;
+}
+section.skill-section .skill .head .left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+section.skill-section .item li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.6rem;
+  background-color: var(--color-darkPurple);
+  margin-bottom: 0.3rem;
+  transition: var(--transitions);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+section.skill-section .item li:hover {
+  background-color: var(--color-lightPurple);
 }
