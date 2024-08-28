@@ -25,8 +25,7 @@
           <li><a href="" class="active">Home</a></li>
           <li><a href="">About</a></li>
           <li><a href="">Skills</a></li>
-          <li><a href="">Technology</a></li>
-          <li><a href="">Portfolio</a></li>
+          <li><a href="">Projects</a></li>
           <li><a href="">Let's Talk</a></li>
         </ul>
         <button class="btn"><i class="uil uil-list-ui-alt"></i></button>
@@ -35,7 +34,7 @@
     </nav>
     <!--=====================================END OF NAV BAR=================================================-->
 
-    <section class="landing">
+    <section class="landing" id="home">
       <div class="container">
         <div class="socials">
           <a
@@ -62,13 +61,13 @@
         </div>
         <div class="profile-area">
           <div class="outter-circle">
-            <a href=""> <i id="tag1" class="uil uil-java-script"></i></a>
-            <i id="tag2" class="uil uil-html5"></i>
-            <i id="tag3" class="uil uil-css3-simple"></i>
-            <i id="tag4" class="uil uil-visual-studio"></i>
+            <i id="tag1" class="uil uil-icons"></i>
+            <i id="tag2" class="uil uil-brackets-curly"></i>
+            <i id="tag3" class="uil uil-code-branch"></i>
+            <i id="tag4" class="uil uil-process"></i>
           </div>
           <div class="inner-circle">
-            <img src="./assets/images/IMG_20240128_143119_563.jpg" alt="" />
+            <img src="./assets/images/IMG_20240128_143119_563.jpg" />
           </div>
         </div>
       </div>
@@ -122,7 +121,7 @@
           <div class="head">
             <div class="left">
               <i class="uil uil-icons"></i>
-              <h4>Front End</h4>
+              <h4>Programming Languages</h4>
             </div>
             <i class="uil uil-angle-down"></i>
           </div>
@@ -157,7 +156,42 @@
           <div class="head">
             <div class="left">
               <i class="uil uil-icons"></i>
-              <h4>Front End</h4>
+              <h4>Frameworks</h4>
+            </div>
+            <i class="uil uil-angle-down"></i>
+          </div>
+        </div>
+        <div class="items">
+          <div class="item">
+            <ul>
+              <li>
+                <h4>HTML and CSS</h4>
+                <p>lorem</p>
+              </li>
+              <li>
+                <h4>Java Script</h4>
+                <p>lorem</p>
+              </li>
+              <li>
+                <h4>React.JS</h4>
+                <p>lorem</p>
+              </li>
+              <li>
+                <h4>Next.JS</h4>
+                <p>lorem</p>
+              </li>
+              <li>
+                <h4>Solid.JS</h4>
+                <p>lorem</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="skill">
+          <div class="head">
+            <div class="left">
+              <i class="uil uil-icons"></i>
+              <h4>Tools and Technology</h4>
             </div>
             <i class="uil uil-angle-down"></i>
           </div>
@@ -190,6 +224,76 @@
         </div>
       </div>
     </section>
+
+    <!--================================End of Skill Section========================================-->
+
+    <section class="projects" id="projects">
+      <h1>Projects</h1>
+      <div class="container">
+        <div class="project">
+          <div class="container-img">
+            <img src="./assets/images/1_k3OU519iKbNHycQXdiRraw.jpg" alt="" />
+          </div>
+          <h3>AIMS</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur,
+            mollitia eaque provident sunt maiores excepturi ducimus repudiandae
+            magni ex sit cumque perspiciatis rerum accusantium! Numquam atque
+            modi ex similique iusto?
+          </p>
+          <a class="read-more-link" href="">Github</a>
+        </div>
+        <div class="project">
+          <div class="container-img">
+            <img src="./assets/images/maxresdefault.jpg" alt="" />
+          </div>
+          <h3>Colorization</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur,
+            mollitia eaque provident sunt maiores excepturi ducimus repudiandae
+            magni ex sit cumque perspiciatis rerum accusantium! Numquam atque
+            modi ex similique iusto?
+          </p>
+          <a class="read-more-link" href="">Github</a>
+        </div>
+        <div class="project">
+          <div class="container-img">
+            <img src="./assets/images/1681731881702.png" alt="" />
+          </div>
+          <h3>Hospital Management</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur,
+            mollitia eaque provident sunt maiores excepturi ducimus repudiandae
+            magni ex sit cumque perspiciatis rerum accusantium! Numquam atque
+            modi ex similique iusto?
+          </p>
+          <a class="read-more-link" href="">Github</a>
+        </div>
+      </div>
+    </section>
+
     <script src="./JS/main.js"></script>
   </body>
 </html>
+<!--===============================================END OF PROJECT SECTION===========================-->
+
+<section class="contact" id="contact">
+  <div class="over">
+    <div class="container">
+      <h1>Let's Talk</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint
+        exercitationem, illo aut nisi aperiam quos quis labore suscipit ipsam
+        ducimus eaque accusamus facere error qui quae quas? Fugit, repellat
+        neque.
+      </p>
+      <form>
+        <input type="text" name="Name" placeholder="Name" required />
+        <input type="email" name="Email" placeholder="Email" required />
+        <input type="text" name="Subject" placeholder="Subject" required />
+        <textarea name="Message" placeholder="Message" required></textarea>
+        <input type="submit" name="Submit" class="btn btn-primary" />
+      </form>
+    </div>
+  </div>
+</section>
