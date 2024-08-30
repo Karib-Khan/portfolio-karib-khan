@@ -22,14 +22,18 @@
       <div class="container">
         <a href="./index.html"><h3 class="logo">Karnage</h3></a>
         <ul>
-          <li><a href="" class="active">Home</a></li>
-          <li><a href="">About</a></li>
-          <li><a href="">Skills</a></li>
-          <li><a href="">Projects</a></li>
-          <li><a href="">Let's Talk</a></li>
+          <li><a href="#home" class="active">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skill">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Let's Talk</a></li>
         </ul>
-        <button class="btn"><i class="uil uil-list-ui-alt"></i></button>
-        <button class="btn"><i class="uil uil-times"></i></button>
+        <button id="menu-btn" class="btn">
+          <i class="uil uil-list-ui-alt"></i>
+        </button>
+        <button id="close-btn" class="btn">
+          <i class="uil uil-times"></i>
+        </button>
       </div>
     </nav>
     <!--=====================================END OF NAV BAR=================================================-->
@@ -45,8 +49,11 @@
           <a href="https://github.com/K4R1B" target="_blank"
             ><img src="./assets/images/git.png" alt=""
           /></a>
-          <a id="twitter" href="" target="_blank"
-            ><img src="./assets/images/Twitter-Emblem.png" alt=""
+          <a
+            id="twitter"
+            href="https://www.facebook.com/karib.khan.15/"
+            target="_blank"
+            ><img src="./assets/images/fb.png" alt=""
           /></a>
         </div>
         <div class="info">
@@ -78,7 +85,7 @@
       <h1>About</h1>
       <div class="container">
         <div class="image">
-          <img src="./assets/images/IMG_20240128_143119_563.jpg" alt="" />
+          <img src="./assets/images/Capture.PNG" alt="" />
         </div>
         <div class="info">
           <p>
@@ -271,29 +278,60 @@
         </div>
       </div>
     </section>
+    <section class="contact" id="contact">
+      <div class="over">
+        <div class="container">
+          <h1>Let's Talk</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint
+            exercitationem, illo aut nisi aperiam quos quis labore suscipit
+            ipsam ducimus eaque accusamus facere error qui quae quas? Fugit,
+            repellat neque.
+          </p>
+          <form action="https://formspree.io/f/mqaznjvw" method="POST">
+            <input type="text" name="Name" placeholder="Name" required />
+            <input type="email" name="Email" placeholder="Email" required />
+            <input type="text" name="Subject" placeholder="Subject" required />
+            <textarea name="Message" placeholder="Message" required></textarea>
+            <input type="submit" name="Submit" class="btn btn-primary" />
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <a href=""><h3>Karnage</h3></a>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skill">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Let's Talk</a></li>
+        </ul>
+        <div class="socials">
+          <a
+            href="https://www.linkedin.com/in/abdur-rahman-faruk-khan-482133229/"
+            target="_blank"
+            ><i class="uil uil-linkedin"></i
+          ></a>
+          <a href="https://github.com/K4R1B" target="_blank"
+            ><i class="uil uil-github"></i
+          ></a>
+          <a
+            id="twitter"
+            href="https://www.facebook.com/karib.khan.15/"
+            target="_blank"
+            ><i class="uil uil-facebook"></i
+          ></a>
+        </div>
+      </div>
+      <div class="copyright">
+        Copyright &copy; Karib Khan. All rights reserved
+      </div>
+    </footer>
 
     <script src="./JS/main.js"></script>
   </body>
 </html>
 <!--===============================================END OF PROJECT SECTION===========================-->
-
-<section class="contact" id="contact">
-  <div class="over">
-    <div class="container">
-      <h1>Let's Talk</h1>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint
-        exercitationem, illo aut nisi aperiam quos quis labore suscipit ipsam
-        ducimus eaque accusamus facere error qui quae quas? Fugit, repellat
-        neque.
-      </p>
-      <form>
-        <input type="text" name="Name" placeholder="Name" required />
-        <input type="email" name="Email" placeholder="Email" required />
-        <input type="text" name="Subject" placeholder="Subject" required />
-        <textarea name="Message" placeholder="Message" required></textarea>
-        <input type="submit" name="Submit" class="btn btn-primary" />
-      </form>
-    </div>
-  </div>
-</section>
