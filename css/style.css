@@ -552,6 +552,9 @@ footer .copyright {
     padding-right: 0;
   }
   nav #close-btn {
+    padding-right: 0;
+  }
+  nav #close-btn {
     display: none;
   }
 
@@ -616,8 +619,21 @@ footer .copyright {
     grid-template-columns: 1fr;
     width: 90vw;
   }
-  section.contact .container P {
+  section.contact .over .container {
     margin: 0.5rem auto 0;
     width: 80vw;
+  }
+
+  /*=======================Footer section===========================*/
+
+  footer .container {
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  footer .container ul {
+    flex-direction: column;
+    gap: 1.4rem;
+    text-align: center;
   }
 }
