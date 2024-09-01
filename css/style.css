@@ -24,6 +24,13 @@
   text-decoration: none;
   box-sizing: border-box;
 }
+::-webkit-scrollbar {
+  width: 5px;
+  background-color: var(--color-black);
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--color-blue);
+}
 html {
   font-size: 15px;
   scroll-behavior: smooth;
@@ -118,7 +125,10 @@ nav {
   z-index: 2;
   border-bottom: 1px solid var(--color-light);
 }
-
+nav.show-box-shadow {
+  box-shadow: 0 0.6rem 1rem var(--color-light);
+  border: none;
+}
 nav .container {
   display: flex;
   justify-content: space-between;
@@ -266,10 +276,7 @@ section.landing .profile-area .inner-circle {
   border-radius: 50%;
   overflow: hidden;
 }
-section.skill-section {
-  background-color: var(--color-black2);
-  border-top: solid 1px var(--color-light);
-}
+
 /*=================================== About section===============================*/
 section.about .container {
   display: grid;
@@ -282,6 +289,10 @@ section.about p {
 
 section.about .read-more-content {
   display: none;
+}
+
+section.about .read-more-content.show-content {
+  display: block;
 }
 
 section.about .read-more-link {
@@ -297,6 +308,12 @@ section.about .read-more-link:hover {
 section.about .image img {
   border: solid 3px var(--color-blue);
   border-radius: 5rem 0;
+}
+
+/*=====================SKILL SECTION==========================*/
+section.skill-section {
+  background-color: var(--color-black2);
+  border-top: solid 1px var(--color-light);
 }
 
 section.skill-section .container {
@@ -321,6 +338,15 @@ section.skill-section .skill .head .left {
   align-items: center;
   gap: 1rem;
 }
+
+section.skill-section .items {
+  display: none;
+}
+
+section.skill-section .items.show-items {
+  display: block;
+}
+
 section.skill-section .item li {
   display: flex;
   flex-direction: column;
@@ -359,6 +385,7 @@ section.projects {
   padding: 2rem 2rem;
   display: flex;
   flex-direction: column;
+  border-radius: 1rem;
   cursor: default;
   transition: var(--transitions);
 }

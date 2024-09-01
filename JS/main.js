@@ -31,3 +31,34 @@ navItems.forEach((item) => {
     link.classList.add("active");
   });
 });
+
+//read more section
+
+const readBtn = document.querySelector(".read-more-link");
+const readCont = document.querySelector(".read-more-content");
+readBtn.addEventListener("click", () => {
+  readCont.classList.toggle("show-content");
+
+  if (readCont.classList.contains("show-content")) {
+    readBtn.innerHTML = "Read Less";
+  } else {
+    readBtn.innerHTML = "Read More";
+  }
+});
+
+//show skills
+
+const skillItems = document.querySelectorAll("section.skill-section .skill");
+skillItems.forEach((skill) => {
+  skill.querySelector(".head").addEventListener("click", () => {
+    skill.querySelector(".items").classList.toggle("show-items");
+  });
+});
+
+//add shadow o scroll
+
+window.addEventListener("scroll", () => {
+  document
+    .querySelector("nav")
+    .classList.toggle("show-box-shadow", window.scrollY > 100);
+});
