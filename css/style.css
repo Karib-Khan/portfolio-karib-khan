@@ -650,6 +650,9 @@ footer .copyright {
     margin: 0.5rem auto 0;
     width: 80vw;
   }
+  section.skill-section .skill .item li p {
+    font-size: 9.5px;
+  }
 
   /*=======================Footer section===========================*/
 
