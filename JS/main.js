@@ -1,53 +1,59 @@
+// Mobile menu functionality
 const menuBtn = document.querySelector("#menu-btn");
 const closeBtn = document.querySelector("#close-btn");
 const menuBar = document.querySelector("nav .container ul");
-/*=======================Menu BTN=================================*/
+
 menuBtn.addEventListener("click", () => {
   menuBar.style.display = "block";
   menuBtn.style.display = "none";
   closeBtn.style.display = "inline-block";
 });
-/*=======================close BTN=================================*/
+
 closeBtn.addEventListener("click", () => {
   menuBar.style.display = "none";
   menuBtn.style.display = "inline-block";
   closeBtn.style.display = "none";
 });
 
+// Active link management
 const navItems = menuBar.querySelectorAll("li");
 
-/*=======================remove active class=================================*/
-const chnageActive = () => {
+const removeActiveClass = () => {
   navItems.forEach((item) => {
     const link = item.querySelector("a");
     link.classList.remove("active");
   });
 };
-/*=======================Add active class=================================*/
+
 navItems.forEach((item) => {
   const link = item.querySelector("a");
   link.addEventListener("click", () => {
-    chnageActive();
+    removeActiveClass();
     link.classList.add("active");
+    // Close mobile menu on link click
+    if (window.innerWidth <= 600) {
+      menuBar.style.display = "none";
+      menuBtn.style.display = "inline-block";
+      closeBtn.style.display = "none";
+    }
   });
 });
 
-//read more section
-
+// Read More functionality
 const readBtn = document.querySelector(".read-more-link");
 const readCont = document.querySelector(".read-more-content");
-readBtn.addEventListener("click", () => {
-  readCont.classList.toggle("show-content");
 
-  if (readCont.classList.contains("show-content")) {
-    readBtn.innerHTML = "Read Less";
-  } else {
-    readBtn.innerHTML = "Read More";
-  }
-});
+if (readBtn && readCont) {
+  readBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+    readCont.classList.toggle("show-content");
+    readBtn.innerHTML = readCont.classList.contains("show-content")
+      ? "Read Less"
+      : "Read More";
+  });
+}
 
-//show skills
-
+// Expandable skills
 const skillItems = document.querySelectorAll("section.skill-section .skill");
 skillItems.forEach((skill) => {
   skill.querySelector(".head").addEventListener("click", () => {
@@ -55,10 +61,23 @@ skillItems.forEach((skill) => {
   });
 });
 
-//add shadow o scroll
-
+// Nav shadow on scroll
 window.addEventListener("scroll", () => {
-  document
-    .querySelector("nav")
-    .classList.toggle("show-box-shadow", window.scrollY > 100);
+  const nav = document.querySelector("nav");
+  nav.classList.toggle("show-box-shadow", window.scrollY > 100);
+});
+
+// Smooth scroll padding
+document.addEventListener("DOMContentLoaded", () => {
+  const links = document.querySelectorAll('a[href^="#"]');
+  links.forEach((link) => {
+    link.addEventListener("click", (e) => {
+      const href = link.getAttribute("href");
+      if (href !== "#" && document.querySelector(href)) {
+        e.preventDefault();
+        const target = document.querySelector(href);
+        target.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    });
+  });
 });
