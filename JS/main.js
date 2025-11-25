@@ -53,11 +53,65 @@ if (readBtn && readCont) {
   });
 }
 
-// Expandable skills
+// Expandable skills with dynamic content panel and left slide animation
 const skillItems = document.querySelectorAll("section.skill-section .skill");
+const contentPanel = document.querySelector("section.skill-section .content-panel");
+const skillsContainer = document.querySelector("section.skill-section .container");
+
+const skillsData = {
+  "Programming Languages": {
+    icon: "uil-code-branch",
+    tags: ["HTML", "CSS", "JavaScript", "C++", "Python", "SQL", "PHP"]
+  },
+  "Frameworks & Technologies": {
+    icon: "uil-layer-group",
+    tags: ["React.JS", "WordPress", "Streamlit", "ERPNext", "Node.js"]
+  },
+  "Tools & Software": {
+    icon: "uil-tools",
+    tags: ["VS Code", "WebStorm", "Git", "GitHub", "Jupyter", "Postman", "Docker"]
+  }
+};
+
+let activeSkill = null;
+
 skillItems.forEach((skill) => {
   skill.querySelector(".head").addEventListener("click", () => {
-    skill.querySelector(".items").classList.toggle("show-items");
+    const skillName = skill.querySelector(".head h4").textContent;
+    
+    // If clicking the same skill, toggle off
+    if (activeSkill === skillName) {
+      // Remove active class from all skills
+      skillItems.forEach(s => s.classList.remove("active"));
+      // Hide the panel
+      contentPanel.classList.remove("active");
+      skillsContainer.classList.remove("show-panel");
+      activeSkill = null;
+    } else {
+      // Remove active class from all skills
+      skillItems.forEach(s => s.classList.remove("active"));
+      
+      // Add active class to clicked skill
+      skill.classList.add("active");
+      
+      // Show the panel and trigger left slide animation
+      skillsContainer.classList.add("show-panel");
+      
+      // Update content panel
+      const skillData = skillsData[skillName];
+      
+      if (skillData) {
+        contentPanel.classList.add("active");
+        contentPanel.innerHTML = `
+          <h2><i class="uil ${skillData.icon}"></i>${skillName}</h2>
+          <div class="skills-items">
+            ${skillData.tags.map(tag => `<div class="skill-tag">${tag}</div>`).join('')}
+          </div>
+        `;
+      }
+      
+      activeSkill = skillName;
+    }
   });
 });
 
